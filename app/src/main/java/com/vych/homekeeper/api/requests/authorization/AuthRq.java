@@ -5,6 +5,7 @@ import com.vych.homekeeper.api.annotations.RequestMethod;
 import com.vych.homekeeper.api.annotations.URL;
 import com.vych.homekeeper.api.requests.BaseRq;
 import com.vych.homekeeper.api.requests.BaseRs;
+import com.vych.homekeeper.api.responses.authorization.AuthRs;
 import com.vych.homekeeper.api.utils.Constants;
 
 /**
@@ -30,7 +31,7 @@ public class AuthRq extends BaseRq {
         return this;
     }
 
-    public BaseRs post() {
-        return this.postAs(BaseRs.class);
+    public AuthRs post() {
+        return (AuthRs) this.postAs(AuthRs.class);
     }
 }

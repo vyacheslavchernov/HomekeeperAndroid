@@ -1,4 +1,4 @@
-package com.vych.homekeeper;
+package com.vych.homekeeper.views;
 
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -8,14 +8,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.vych.homekeeper.R;
 import com.vych.homekeeper.api.requests.BaseRs;
 import com.vych.homekeeper.api.requests.authorization.AuthRq;
-import com.vych.homekeeper.api.requests.montData.GetRq;
-import com.vych.homekeeper.api.responses.monthData.GetRs;
 import com.vych.homekeeper.databinding.FragmentSecondBinding;
-
-import okhttp3.Response;
 
 public class SecondFragment extends Fragment {
 
@@ -45,16 +44,19 @@ public class SecondFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 AuthRq authRq = new AuthRq();
                 BaseRs authRs = authRq
-                        .setUser("admin")
-                        .setPassword("747798")
+                        .setUser(binding.userInput.getText().toString())
+                        .setPassword(binding.passInput.getText().toString())
                         .post();
 
-
-                GetRq getRq = new GetRq();
-                GetRs getRs = getRq.setId("202203").post();
+                if (authRs.isSuccess()) {
+                    NavHostFragment.findNavController(SecondFragment.this)
+                            .navigate(R.id.action_SecondFragment_to_Dashboard);
+                } else {
+                    Snackbar.make(view, "Неверные логин и/или пароль!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
     }

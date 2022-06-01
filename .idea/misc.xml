@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/dashboard.xml" value="0.365625" />
+        <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/dashboard_detail.xml" value="0.36367753623188404" />
         <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/fragment_first.xml" value="0.36666666666666664" />
         <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/login_form.xml" value="0.15" />
+        <entry key="..\:/Develop/Android/HomekeeperAndroid/app/src/main/res/layout/welcome_view.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

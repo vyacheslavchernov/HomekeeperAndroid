@@ -7,11 +7,8 @@ import com.vych.homekeeper.api.utils.Constants;
 
 import okhttp3.Response;
 
-/**
- * Модель ответа на запрос GetRq
- */
 @ResponseType(Constants.REQUEST_TYPES.JSON)
-public class GetRs extends BaseRs {
+public class GetLastRs extends BaseRs {
     @Name("id")
     private String id;
 

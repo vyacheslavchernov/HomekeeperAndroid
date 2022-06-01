@@ -16,8 +16,9 @@ import okhttp3.Response;
  * Базовая модель ответа для всех запросов к API
  */
 @ResponseType(Constants.REQUEST_TYPES.HTML)
-public class BaseRs {
-    private String rawContent;
+public abstract class BaseRs {
+    String rawContent;
+    private boolean success;
 
     public BaseRs parseResponse(Response response) {
         try {
@@ -26,6 +27,8 @@ public class BaseRs {
             e.printStackTrace();
             return null;
         }
+
+        this.success = this.checkSuccess(response);
 
         HashMap<?, ?> result;
         try {
@@ -50,4 +53,14 @@ public class BaseRs {
 
         return this;
     }
+
+    public String getRawContent() {
+        return this.rawContent;
+    }
+
+    public boolean isSuccess() {
+        return this.success;
+    }
+
+    protected abstract boolean checkSuccess(Response response);
 }

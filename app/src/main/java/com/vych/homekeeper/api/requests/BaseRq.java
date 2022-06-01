@@ -99,8 +99,11 @@ public class BaseRq {
                     return new Request.Builder()
                             .url(urlBuilder.build())
                             .build();
+                } else {
+                    return new Request.Builder()
+                            .url(this.url)
+                            .build();
                 }
-                break;
 
             case POST:
                 return new Request.Builder()
