@@ -6,7 +6,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="auth">Авторизоваться</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment">Привет! Для продолжения работы необходимо авторизоваться.</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
