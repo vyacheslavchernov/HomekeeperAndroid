@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="WrapPadding">12dp</dimen>
+    <dimen name="WrapTopPadding">125dp</dimen>
+    <dimen name="HeaderTextSize">45sp</dimen>
+    <dimen name="MainTextSize">16sp</dimen>
+    <dimen name="VerticalMargin">24dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 </resources>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Homekeeper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.HomeKeeper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,12 +14,21 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Homekeeper.NoActionBar">
+    <style name="Theme.HomeKeeper.Fullscreen" parent="Theme.HomeKeeper">
+        <item name="android:actionBarStyle">@style/Widget.Theme.HomeKeeper.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.HomeKeeper.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+    <style name="Theme.HomeKeeper.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="Theme.Homekeeper.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Homekeeper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.HomeKeeper.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.HomeKeeper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
