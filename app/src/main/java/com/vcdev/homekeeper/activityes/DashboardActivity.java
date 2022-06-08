@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import com.vcdev.homekeeper.api.requests.BaseRq;
 import com.vcdev.homekeeper.api.requests.BaseRs;
 import com.vcdev.homekeeper.api.requests.montData.GetCalcRq;
 import com.vcdev.homekeeper.api.requests.montData.GetLastRq;
+import com.vcdev.homekeeper.api.utils.UsefulMethods;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -22,6 +24,10 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window window = this.getWindow();
+        UsefulMethods.setStatusBar(window, this);
+
         setContentView(R.layout.activity_dashboard);
 
         new AsyncRequest().execute(new GetCalcRq().setId("202202"));

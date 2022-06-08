@@ -19,17 +19,15 @@
             android:name=".activityes.DashboardActivity"
             android:exported="false"
             android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.Material3.DayNight" />
+            android:theme="@style/Theme.MaterialAppBar" />
         <activity
             android:name=".activityes.LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.Material3.DayNight.NoActionBar" /> <!-- <activity -->
-        <!-- android:name=".LoadingActivity" -->
-        <!-- android:exported="false" /> -->
+            android:theme="@style/Theme.MaterialAppBar" />
         <activity
             android:name=".activityes.LoadingActivity"
             android:exported="true"
-            android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+            android:theme="@style/Theme.MaterialAppBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

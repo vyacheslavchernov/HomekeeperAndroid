@@ -4,30 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackgroundCacheHint"
     tools:context=".activityes.LoadingActivity">
 
     <TextView
         android:id="@+id/textView"
-        style="@style/Widget.AppCompat.TextView"
+        style="@style/TextAppearance.Material3.DisplayMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/WrapPadding"
         android:layout_marginTop="128dp"
         android:text="@string/AppName"
         android:textColor="?android:attr/textColorPrimary"
-        android:textSize="@dimen/HeaderTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
+        style="@style/TextAppearance.Material3.LabelMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:paddingLeft="@dimen/WrapPadding"
         android:text="@string/Loading"
-        android:textSize="@dimen/MainTextSize"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

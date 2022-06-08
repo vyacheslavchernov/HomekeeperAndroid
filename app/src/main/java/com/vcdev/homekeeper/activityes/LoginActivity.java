@@ -8,13 +8,18 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.vcdev.homekeeper.R;
 import com.vcdev.homekeeper.api.requests.BaseRq;
 import com.vcdev.homekeeper.api.requests.BaseRs;
 import com.vcdev.homekeeper.api.requests.authorization.AuthRq;
+import com.vcdev.homekeeper.api.utils.UsefulMethods;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,10 +28,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window window = this.getWindow();
+        UsefulMethods.setStatusBar(window, this);
+
         setContentView(R.layout.activity_login);
 
-        TextView login = (TextView) findViewById(R.id.loginTextView);
-        TextView password = (TextView) findViewById(R.id.passwordTextView);
+        TextInputEditText login =  findViewById(R.id.loginTextInput);
+        TextInputEditText password = findViewById(R.id.authPasswordInput);
 
         Button button = (Button) findViewById(R.id.signinButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, DashboardActivity.class);
                 startActivity(intent);
             } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
                 builder.setTitle("Error!")
                         .setMessage("Wrong password and/or login");
                 builder.create().show();
