@@ -7,4 +7,7 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="doSignin">Авторизоваться</string>
+    <string name="title_activity_dashboard">Дашборд</string>
+    <string name="error">Ошибка</string>
+    <string name="wrongCredentials">Неверные логин и\\или пароль!</string>
 </resources>
