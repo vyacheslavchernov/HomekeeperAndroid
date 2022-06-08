@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.vcdev.homekeeper.R;
 import com.vcdev.homekeeper.api.requests.BaseRq;
 import com.vcdev.homekeeper.api.requests.BaseRs;
