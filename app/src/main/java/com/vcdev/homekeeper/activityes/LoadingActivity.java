@@ -53,6 +53,12 @@ public class LoadingActivity extends AppCompatActivity {
                 intent = new Intent(context, LoginActivity.class);
             }
             startActivity(intent);
+            finishAffinity();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // do nothing
     }
 }

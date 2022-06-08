@@ -1,8 +1,5 @@
 package com.vcdev.homekeeper.activityes;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -62,12 +59,18 @@ public class LoginActivity extends AppCompatActivity {
             if (s.isSuccess()) {
                 Intent intent = new Intent(context, DashboardActivity.class);
                 startActivity(intent);
+                finishAffinity();
             } else {
                 MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-                builder.setTitle("Error!")
-                        .setMessage("Wrong password and/or login");
+                builder.setTitle(getResources().getString(R.string.error) + "!")
+                        .setMessage(getResources().getString(R.string.wrongCredentials));
                 builder.create().show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // do nothing
     }
 }
